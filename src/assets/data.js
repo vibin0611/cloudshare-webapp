@@ -7,6 +7,8 @@ import {
   History,
 } from "lucide-react";
 
+// ================= FEATURES =================
+
 export const features = [
   {
     title: "Easy File Upload",
@@ -52,6 +54,8 @@ export const features = [
   },
 ];
 
+// ================= PRICING =================
+
 export const pricingPlans = [
   {
     name: "Free",
@@ -66,6 +70,7 @@ export const pricingPlans = [
     cta: "Get Started",
     highlighted: false,
   },
+
   {
     name: "Premium",
     description: "For individuals with larger needs",
@@ -80,6 +85,7 @@ export const pricingPlans = [
     cta: "Go Premium",
     highlighted: true,
   },
+
   {
     name: "Ultimate",
     description: "For teams and businesses",
@@ -94,5 +100,60 @@ export const pricingPlans = [
     ],
     cta: "Go Ultimate",
     highlighted: false,
+  },
+];
+
+// ================= TESTIMONIALS =================
+
+// ==================== TESTIMONIALS ====================
+
+export const testimonials = [
+  {
+    name: "Arun Kumar",
+    role: "Software Developer",
+    company: "Tech Solutions",
+    image: "https://i.pravatar.cc/150?img=12",
+    message:
+      "CloudShare makes sharing files extremely easy. I can upload my files quickly and share them securely with my team.",
+  },
+  {
+    name: "Priya Sharma",
+    role: "UI/UX Designer",
+    company: "Creative Studio",
+    image: "https://i.pravatar.cc/150?img=47",
+    message:
+      "I love how simple CloudShare is to use. The interface is clean, fast, and I don't have to worry about my files.",
+  },
+  {
+    name: "Rahul Raj",
+    role: "Project Manager",
+    company: "Digital Works",
+    image: "https://i.pravatar.cc/150?img=33",
+    message:
+      "CloudShare has made it much easier for our team to exchange large files. The secure sharing feature is especially useful.",
+  },
+  {
+    name: "Sneha Patel",
+    role: "Business Analyst",
+    company: "DataCorp",
+    image: "https://i.pravatar.cc/150?img=44",
+    message:
+      "The file management features are excellent. I can organize and access my important documents whenever I need them.",
+  },
+  {
+    name: "Vikram Singh",
+    role: "Full Stack Developer",
+    company: "CodeLabs",
+    image: "https://i.pravatar.cc/150?img=11",
+    message:
+      "CloudShare provides a simple and reliable solution for file sharing. It has become part of my daily workflow.",
+  },
+  {
+    name: "Anjali Menon",
+    role: "Product Designer",
+    company: "InnovateHub",
+    image: "https://i.pravatar.cc/150?img=32",
+    message:
+      "The experience is smooth and professional. Uploading, managing, and sharing files takes only a few seconds.",
   },
 ];
