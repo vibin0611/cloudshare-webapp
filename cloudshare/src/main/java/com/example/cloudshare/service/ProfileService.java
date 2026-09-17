@@ -1,9 +1,11 @@
+
 package com.example.cloudshare.service;
 
 import com.example.cloudshare.documents.ProfileDocument;
 import com.example.cloudshare.dto.ProfileDTO;
 import com.example.cloudshare.repository.ProfileRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
 import java.time.Instant;
@@ -28,10 +30,14 @@ public class ProfileService {
                 .createdAt(Instant.now())
                 .build();
 
-        profile = profileRepository.save(profile);
+        try {
+            profile = profileRepository.saveAndFlush(profile);
+        } catch (DataIntegrityViolationException e) {
+            throw new RuntimeException("Email already exists");
+        }
 
         return ProfileDTO.builder()
-                .clerkId(profile.getClerkId())  // ✅ fixed
+                .clerkId(profile.getClerkId())
                 .email(profile.getEmail())
                 .firstName(profile.getFirstName())
                 .lastName(profile.getLastName())
